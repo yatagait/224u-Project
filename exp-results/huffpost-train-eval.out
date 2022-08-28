@@ -1,0 +1,363 @@
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.LayerNorm.bias', 'predictions.decoder.weight', 'predictions.dense.weight', 'predictions.LayerNorm.weight', 'predictions.decoder.bias', 'predictions.dense.bias', 'predictions.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Namespace(datasource='huffpost', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=1000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=1, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, mix_beta=2.0, task_calibration=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=1, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0, trial=0)
+ProtoNet.data_huffpost.cls_5.mbs_1.ubs_1.metalr2e-05.innerlr0.001.numupdates5
+iter: 100, loss_all: 1.5370556116104126, acc: 0.3423999845981598
+iter: 200, loss_all: 1.303296446800232, acc: 0.46719998121261597
+iter: 300, loss_all: 1.258108377456665, acc: 0.4824000895023346
+iter: 400, loss_all: 1.1864423751831055, acc: 0.5247999429702759
+iter: 500, loss_all: 1.2330279350280762, acc: 0.49880003929138184
+iter: 600, loss_all: 1.1277101039886475, acc: 0.557200014591217
+iter: 700, loss_all: 1.1408584117889404, acc: 0.5435999631881714
+iter: 800, loss_all: 1.0716211795806885, acc: 0.5671999454498291
+iter: 900, loss_all: 1.0504992008209229, acc: 0.5804000496864319
+iter: 1000, loss_all: 1.0970500707626343, acc: 0.5588000416755676
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.LayerNorm.weight', 'predictions.LayerNorm.bias', 'predictions.bias', 'predictions.dense.weight', 'predictions.decoder.bias', 'predictions.decoder.weight', 'predictions.dense.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/utils.py:146: RuntimeWarning: invalid value encountered in true_divide
+  bin_acc, bin_conf = bin_acc / bin_size, bin_conf / bin_size
+Namespace(datasource='huffpost', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=1000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=1, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, mix_beta=2.0, task_calibration=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=0, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0, trial=0)
+ProtoNet.data_huffpost.cls_5.mbs_1.ubs_1.metalr2e-05.innerlr0.001.numupdates5
+val_epoch is 200, acc is 0.4458471648518825, ci95 is 0.010346816137321281
+Overall Calibration Errors for Test Epoch 200
+Total number of tasks: 5
+Task = 0: ECE = 0.022007694783004808, MCE = 0.16360359191894536
+Task = 1: ECE = 0.017313381144374716, MCE = 0.11208177649456519
+Task = 2: ECE = 0.017392541118634506, MCE = 0.14151198523385178
+Task = 3: ECE = 0.016718770824001482, MCE = 0.1698760986328125
+Task = 4: ECE = 0.01863907633429745, MCE = 0.14236982245194285
+-- bin_accs =  [0.06476762 0.13543841 0.2243184  0.34714348 0.48139079 0.63913596
+ 0.75179856 0.84677419 0.91044776 1.        ]
+-- bin_confs =  [0.05409329 0.1488488  0.24575386 0.3430363  0.44263937 0.54230255
+ 0.64316325 0.7446244  0.8404042  0.92712229]
+-- bin_sizes =  [10005. 11496.  8216.  4586.  2042.   787.   278.   124.    67.    24.]
+-- Overall ECE =  0.017556387399122172
+-- Overall MCE =  0.10863531236168289
+RunResults:ProtoNet,1,5,64,4,huffpost,val,200,0.445847,0.017556,0.108635
+test_epoch is 200, acc is 0.4162126130786449, ci95 is 0.009887604563835037
+Overall Calibration Errors for Test Epoch 200
+Total number of tasks: 5
+Task = 0: ECE = 0.01200204543497079, MCE = 0.18414276838302612
+Task = 1: ECE = 0.020727967962474125, MCE = 0.18785687855311806
+Task = 2: ECE = 0.025959483396967385, MCE = 0.1673522790273031
+Task = 3: ECE = 0.022134740313026206, MCE = 0.16094231605529785
+Task = 4: ECE = 0.022832408854335642, MCE = 0.08261249113495134
+-- bin_accs =  [0.08274942 0.13726122 0.22178771 0.34607509 0.48558508 0.59433962
+ 0.68627451 0.82795699 0.85       1.        ]
+-- bin_confs =  [0.06023612 0.14869911 0.2451701  0.34286457 0.44208906 0.54182661
+ 0.6446007  0.74539019 0.84190704 0.90711751]
+-- bin_sizes =  [8.9910e+03 1.2407e+04 8.9500e+03 4.3950e+03 1.7690e+03 7.4200e+02
+ 2.5500e+02 9.3000e+01 2.0000e+01 3.0000e+00]
+-- Overall ECE =  0.018667500739873843
+-- Overall MCE =  0.092882494131724
+RunResults:ProtoNet,1,5,64,4,huffpost,test,200,0.416213,0.018668,0.092882
+val_epoch is 400, acc is 0.4652491578974597, ci95 is 0.011016709538325661
+Overall Calibration Errors for Test Epoch 400
+Total number of tasks: 5
+Task = 0: ECE = 0.020357395564994944, MCE = 0.18071762720743811
+Task = 1: ECE = 0.015439431580198172, MCE = 0.12099596659342449
+Task = 2: ECE = 0.022231991790061773, MCE = 0.0704019334581163
+Task = 3: ECE = 0.016134924650984348, MCE = 0.11093455347521552
+Task = 4: ECE = 0.01746678146412998, MCE = 0.09926435682508677
+-- bin_accs =  [0.06623855 0.14883417 0.23664638 0.31282759 0.42411924 0.52838759
+ 0.64041995 0.71590909 0.84680851 0.90666667]
+-- bin_confs =  [0.04855142 0.14597873 0.24644576 0.34581714 0.44659827 0.54761485
+ 0.64675225 0.74438441 0.84500119 0.92900281]
+-- bin_sizes =  [13859.  9178.  5916.  3625.  2214.  1321.   762.   440.   235.    75.]
+-- Overall ECE =  0.014445592481036523
+-- Overall MCE =  0.03298955667429959
+RunResults:ProtoNet,1,5,64,4,huffpost,val,400,0.465249,0.014446,0.032990
+test_epoch is 400, acc is 0.42418603462931326, ci95 is 0.00921300608809474
+Overall Calibration Errors for Test Epoch 400
+Total number of tasks: 5
+Task = 0: ECE = 0.030690668999554707, MCE = 0.10590768897015124
+Task = 1: ECE = 0.027888866500601024, MCE = 0.09580017538631658
+Task = 2: ECE = 0.020044065202985493, MCE = 0.06226666768391931
+Task = 3: ECE = 0.01589674141715927, MCE = 0.06080973148345947
+Task = 4: ECE = 0.023440823729252103, MCE = 0.08650417327880866
+-- bin_accs =  [0.07506533 0.15813767 0.22816207 0.30888611 0.40402685 0.50498339
+ 0.63993174 0.69620253 0.85430464 0.98076923]
+-- bin_confs =  [0.0509913  0.14699231 0.24601629 0.34523619 0.44540704 0.54402275
+ 0.64498291 0.74303398 0.84670418 0.94030815]
+-- bin_sizes =  [12629.  9966.  6491.  3995.  2235.  1204.   586.   316.   151.    52.]
+-- Overall ECE =  0.022238255421584634
+-- Overall MCE =  0.04683144484894175
+RunResults:ProtoNet,1,5,64,4,huffpost,test,400,0.424186,0.022238,0.046831
+val_epoch is 600, acc is 0.4710963334999607, ci95 is 0.00997249227884638
+Overall Calibration Errors for Test Epoch 600
+Total number of tasks: 5
+Task = 0: ECE = 0.02022282343766221, MCE = 0.16391143798828123
+Task = 1: ECE = 0.021585027910150167, MCE = 0.17600852251052856
+Task = 2: ECE = 0.018514064902879077, MCE = 0.07392396926879885
+Task = 3: ECE = 0.020111688125965206, MCE = 0.0975997924804688
+Task = 4: ECE = 0.023237232322312666, MCE = 0.08436251476983336
+-- bin_accs =  [0.06768441 0.15267355 0.2312335  0.30832858 0.42086649 0.53360489
+ 0.59613197 0.71301248 0.77952756 0.96428571]
+-- bin_confs =  [0.04677176 0.14529942 0.2469056  0.34639933 0.44681969 0.54661504
+ 0.64770663 0.74692104 0.84185018 0.92591036]
+-- bin_sizes =  [14804.  8528.  5302.  3506.  2262.  1473.   879.   561.   254.    56.]
+-- Overall ECE =  0.019913696662928186
+-- Overall MCE =  0.06232261657714844
+RunResults:ProtoNet,1,5,64,4,huffpost,val,600,0.471096,0.019914,0.062323
+test_epoch is 600, acc is 0.39933553746471373, ci95 is 0.009780953306998158
+Overall Calibration Errors for Test Epoch 600
+Total number of tasks: 5
+Task = 0: ECE = 0.030042368739942375, MCE = 0.14318504333496096
+Task = 1: ECE = 0.04754774819180815, MCE = 0.16153692691884147
+Task = 2: ECE = 0.03972853537017721, MCE = 0.10827671397816052
+Task = 3: ECE = 0.032011895544109145, MCE = 0.16753191825671077
+Task = 4: ECE = 0.03393566949026925, MCE = 0.14301379619200538
+-- bin_accs =  [0.09080825 0.15975126 0.23133959 0.30359979 0.36593886 0.45880452
+ 0.54801536 0.62140992 0.73796791 0.93877551]
+-- bin_confs =  [0.04938477 0.14663137 0.24663297 0.34593109 0.44532707 0.54497624
+ 0.64383149 0.74554304 0.84159221 0.92985538]
+-- bin_sizes =  [13523.  9327.  6069.  3778.  2290.  1238.   781.   383.   187.    49.]
+-- Overall ECE =  0.036304367984252114
+-- Overall MCE =  0.12413311751642053
+RunResults:ProtoNet,1,5,64,4,huffpost,test,600,0.399336,0.036304,0.124133
+val_epoch is 800, acc is 0.4700332087189256, ci95 is 0.010248896686684614
+Overall Calibration Errors for Test Epoch 800
+Total number of tasks: 5
+Task = 0: ECE = 0.021951228043565713, MCE = 0.062407110729356785
+Task = 1: ECE = 0.03114683563131034, MCE = 0.15598487854003906
+Task = 2: ECE = 0.02021185181069611, MCE = 0.07261708577473958
+Task = 3: ECE = 0.02448232859868149, MCE = 0.12071861267089845
+Task = 4: ECE = 0.023361333042284185, MCE = 0.08279800415039062
+-- bin_accs =  [0.07551394 0.14804213 0.22132834 0.30991616 0.42588343 0.52366864
+ 0.59207459 0.70556553 0.78525641 0.91111111]
+-- bin_confs =  [0.0482665  0.14597679 0.24547222 0.34666469 0.44617416 0.54647432
+ 0.6461294  0.74503588 0.84392639 0.93067428]
+-- bin_sizes =  [14739.  8734.  5345.  3459.  2179.  1352.   858.   557.   312.    90.]
+-- Overall ECE =  0.0223063782346605
+-- Overall MCE =  0.05866998281234348
+RunResults:ProtoNet,1,5,64,4,huffpost,val,800,0.470033,0.022306,0.058670
+test_epoch is 800, acc is 0.39734218056712833, ci95 is 0.008771540313177688
+Overall Calibration Errors for Test Epoch 800
+Total number of tasks: 5
+Task = 0: ECE = 0.038650674027857976, MCE = 0.20586118642349688
+Task = 1: ECE = 0.024566177102022396, MCE = 0.21711751392909462
+Task = 2: ECE = 0.040013558777463785, MCE = 0.11804106607602505
+Task = 3: ECE = 0.04151913189808791, MCE = 0.42823654413223267
+Task = 4: ECE = 0.0474068814654683, MCE = 0.1354003319373498
+-- bin_accs =  [0.08943507 0.16540164 0.23627685 0.29620596 0.36443015 0.4387047
+ 0.52189781 0.65577889 0.79710145 0.77358491]
+-- bin_confs =  [0.05024579 0.14677748 0.24623358 0.34565758 0.44545057 0.54671779
+ 0.64427685 0.74490464 0.84215411 0.92734376]
+-- bin_sizes =  [13630.  9486.  5866.  3690.  2176.  1297.   822.   398.   207.    53.]
+-- Overall ECE =  0.03778438813979445
+-- Overall MCE =  0.15375885873470663
+RunResults:ProtoNet,1,5,64,4,huffpost,test,800,0.397342,0.037784,0.153759
+val_epoch is 1000, acc is 0.4477076292334997, ci95 is 0.010142934131824953
+Overall Calibration Errors for Test Epoch 1000
+Total number of tasks: 5
+Task = 0: ECE = 0.033438213513143036, MCE = 0.09342124813892805
+Task = 1: ECE = 0.04076032974395247, MCE = 0.11749017238616943
+Task = 2: ECE = 0.04061585879405076, MCE = 0.17606617320667617
+Task = 3: ECE = 0.047801811370342666, MCE = 0.09507988973161019
+Task = 4: ECE = 0.03371684787281328, MCE = 0.12786108209181202
+-- bin_accs =  [0.08390753 0.15719624 0.22189581 0.29226277 0.37638534 0.48227425
+ 0.58199357 0.63636364 0.76375405 0.88571429]
+-- bin_confs =  [0.04254251 0.14583292 0.24615163 0.34735508 0.44729241 0.54573216
+ 0.6467182  0.74520371 0.84400636 0.92912036]
+-- bin_sizes =  [15529.  7761.  5106.  3425.  2346.  1495.   933.   616.   309.   105.]
+-- Overall ECE =  0.038833120707261616
+-- Overall MCE =  0.10884007540616125
+RunResults:ProtoNet,1,5,64,4,huffpost,val,1000,0.447708,0.038833,0.108840
+test_epoch is 1000, acc is 0.4086378628134331, ci95 is 0.01014652306636428
+Overall Calibration Errors for Test Epoch 1000
+Total number of tasks: 5
+Task = 0: ECE = 0.04177600784555228, MCE = 0.34810788290841244
+Task = 1: ECE = 0.040372455191374626, MCE = 0.16455632990056823
+Task = 2: ECE = 0.048589183769352826, MCE = 0.2556598239474826
+Task = 3: ECE = 0.03833823638104917, MCE = 0.18255566536112044
+Task = 4: ECE = 0.03046115685142947, MCE = 0.42213010787963867
+-- bin_accs =  [0.0897896  0.16453113 0.22458874 0.29769335 0.37027027 0.45461422
+ 0.56986634 0.63083164 0.72427984 0.73529412]
+-- bin_confs =  [0.04798305 0.14676888 0.2464256  0.34678884 0.44666998 0.54487948
+ 0.64808126 0.74217458 0.84333395 0.92947866]
+-- bin_sizes =  [14211.  8819.  5775.  3685.  2220.  1322.   823.   493.   243.    34.]
+-- Overall ECE =  0.039907408007751666
+-- Overall MCE =  0.1941845417022705
+RunResults:ProtoNet,1,5,64,4,huffpost,test,1000,0.408638,0.039907,0.194185
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.dense.weight', 'predictions.decoder.weight', 'predictions.dense.bias', 'predictions.LayerNorm.weight', 'predictions.decoder.bias', 'predictions.bias', 'predictions.LayerNorm.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Namespace(datasource='huffpost', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=1000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=5, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, mix_beta=2.0, task_calibration=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=1, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0, trial=0)
+ProtoNet.data_huffpost.cls_5.mbs_1.ubs_5.metalr2e-05.innerlr0.001.numupdates5
+iter: 100, loss_all: 1.1766719818115234, acc: 0.5304000377655029
+iter: 200, loss_all: 0.9079515933990479, acc: 0.64000004529953
+iter: 300, loss_all: 0.8291374444961548, acc: 0.6759999394416809
+iter: 400, loss_all: 0.796961784362793, acc: 0.7000001668930054
+iter: 500, loss_all: 0.7887540459632874, acc: 0.7003999352455139
+iter: 600, loss_all: 0.7542213797569275, acc: 0.7135999798774719
+iter: 700, loss_all: 0.7476342916488647, acc: 0.720000147819519
+iter: 800, loss_all: 0.7563977241516113, acc: 0.7152000665664673
+iter: 900, loss_all: 0.7064284086227417, acc: 0.7371999025344849
+iter: 1000, loss_all: 0.7539616227149963, acc: 0.7188000679016113
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.bias', 'predictions.decoder.weight', 'predictions.dense.bias', 'predictions.dense.weight', 'predictions.LayerNorm.weight', 'predictions.LayerNorm.bias', 'predictions.decoder.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Namespace(datasource='huffpost', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=1000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=5, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, mix_beta=2.0, task_calibration=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=0, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0, trial=0)
+ProtoNet.data_huffpost.cls_5.mbs_1.ubs_5.metalr2e-05.innerlr0.001.numupdates5
+val_epoch is 200, acc is 0.617275731706144, ci95 is 0.008629116429015198
+Overall Calibration Errors for Test Epoch 200
+Total number of tasks: 5
+Task = 0: ECE = 0.018235098499792365, MCE = 0.04704008822582956
+Task = 1: ECE = 0.015203084850628117, MCE = 0.0837360223134358
+Task = 2: ECE = 0.019930257702190615, MCE = 0.04760658264160156
+Task = 3: ECE = 0.01578915009862957, MCE = 0.05700662786310373
+Task = 4: ECE = 0.02020196756255191, MCE = 0.05906111194241437
+-- bin_accs =  [0.04485354 0.13857143 0.21499849 0.32743764 0.43499101 0.54357798
+ 0.65022831 0.72986748 0.83723653 0.90658174]
+-- bin_confs =  [0.0308119  0.14511868 0.24526726 0.34658948 0.44712747 0.54680688
+ 0.6509704  0.74893991 0.84993719 0.951458  ]
+-- bin_sizes =  [19664.  5600.  3307.  2205.  1669.  1308.  1095.   981.   854.   942.]
+-- Overall ECE =  0.014677198644492316
+-- Overall MCE =  0.04487626061571126
+RunResults:ProtoNet,5,5,64,4,huffpost,val,200,0.617276,0.014677,0.044876
+test_epoch is 200, acc is 0.5847175926267111, ci95 is 0.008967984390840362
+Overall Calibration Errors for Test Epoch 200
+Total number of tasks: 5
+Task = 0: ECE = 0.014697646841258306, MCE = 0.0553761186270878
+Task = 1: ECE = 0.007767201167008412, MCE = 0.0593001732459435
+Task = 2: ECE = 0.01776594092283534, MCE = 0.07601496487727999
+Task = 3: ECE = 0.011987818721124905, MCE = 0.04589224220218524
+Task = 4: ECE = 0.011577183923055958, MCE = 0.048375155474688514
+-- bin_accs =  [0.04322067 0.13598075 0.22591362 0.33790293 0.44203282 0.54753395
+ 0.6710403  0.76035132 0.85385878 0.94482759]
+-- bin_confs =  [0.03504538 0.14445783 0.24655922 0.34709837 0.44788543 0.54612255
+ 0.6481635  0.74861706 0.84955574 0.95175395]
+-- bin_sizes =  [17723.  6648.  4214.  2699.  1889.  1399.  1067.   797.   609.   580.]
+-- Overall ECE =  0.009740732592205668
+-- Overall MCE =  0.02287680027969785
+RunResults:ProtoNet,5,5,64,4,huffpost,test,200,0.584718,0.009741,0.022877
+val_epoch is 400, acc is 0.611827227760391, ci95 is 0.008085095937064659
+Overall Calibration Errors for Test Epoch 400
+Total number of tasks: 5
+Task = 0: ECE = 0.016345257426417154, MCE = 0.03796865069676958
+Task = 1: ECE = 0.013412408670317696, MCE = 0.040702105742957184
+Task = 2: ECE = 0.015609432993537172, MCE = 0.07226785024007165
+Task = 3: ECE = 0.014099074455590735, MCE = 0.051889353785021464
+Task = 4: ECE = 0.014225154635914145, MCE = 0.060164887050412785
+-- bin_accs =  [0.04442964 0.13939929 0.22222222 0.32998691 0.44081633 0.54447853
+ 0.63762743 0.73872951 0.82352941 0.92883895]
+-- bin_confs =  [0.03271919 0.14488116 0.24607884 0.34712541 0.4477203  0.5476481
+ 0.64782489 0.75122477 0.84927792 0.94772028]
+-- bin_sizes =  [19514.  5660.  3384.  2291.  1715.  1304.  1079.   976.   901.   801.]
+-- Overall ECE =  0.012147118451191336
+-- Overall MCE =  0.02574850372416071
+RunResults:ProtoNet,5,5,64,4,huffpost,val,400,0.611827,0.012147,0.025749
+test_epoch is 400, acc is 0.6019933408875006, ci95 is 0.008514766228012026
+Overall Calibration Errors for Test Epoch 400
+Total number of tasks: 5
+Task = 0: ECE = 0.008884878570455248, MCE = 0.04355731452863232
+Task = 1: ECE = 0.010833079189161132, MCE = 0.046496325200147015
+Task = 2: ECE = 0.017455412905873657, MCE = 0.03613806187932761
+Task = 3: ECE = 0.020241962825737127, MCE = 0.07850525954674031
+Task = 4: ECE = 0.013190095717724774, MCE = 0.06221660058103007
+-- bin_accs =  [0.04463138 0.13165491 0.22835738 0.33320297 0.45013928 0.5195572
+ 0.66791745 0.76205451 0.85714286 0.93488372]
+-- bin_confs =  [0.03520369 0.14443278 0.24625362 0.34638916 0.44786277 0.54661279
+ 0.64832067 0.74850694 0.84887376 0.94340236]
+-- bin_sizes =  [18664.  6236.  3604.  2557.  1795.  1355.  1066.   954.   749.   645.]
+-- Overall ECE =  0.01169715957388133
+-- Overall MCE =  0.027055589739247043
+RunResults:ProtoNet,5,5,64,4,huffpost,test,400,0.601993,0.011697,0.027056
+val_epoch is 600, acc is 0.619933540242851, ci95 is 0.007698172583134071
+Overall Calibration Errors for Test Epoch 600
+Total number of tasks: 5
+Task = 0: ECE = 0.012923709704630396, MCE = 0.04879368052763097
+Task = 1: ECE = 0.017620440004671924, MCE = 0.061214144267733195
+Task = 2: ECE = 0.015696376661129562, MCE = 0.051801419725605036
+Task = 3: ECE = 0.018075879879568105, MCE = 0.0999041438652074
+Task = 4: ECE = 0.017472319238605684, MCE = 0.07642209088360818
+-- bin_accs =  [0.04406507 0.13954751 0.22425197 0.32574349 0.41041538 0.5303826
+ 0.62743363 0.74928775 0.85332012 0.94858612]
+-- bin_confs =  [0.0323004  0.14388899 0.24547641 0.34716899 0.44631659 0.54644071
+ 0.64875911 0.74972343 0.8495811  0.94348456]
+-- bin_sizes =  [19857.  5525.  3175.  2152.  1613.  1333.  1130.  1053.  1009.   778.]
+-- Overall ECE =  0.012829376930414246
+-- Overall MCE =  0.035901215678035836
+RunResults:ProtoNet,5,5,64,4,huffpost,val,600,0.619934,0.012829,0.035901
+test_epoch is 600, acc is 0.5904318786340694, ci95 is 0.009088080189101455
+Overall Calibration Errors for Test Epoch 600
+Total number of tasks: 5
+Task = 0: ECE = 0.005942500421771178, MCE = 0.02190511734759215
+Task = 1: ECE = 0.010693269140300563, MCE = 0.058833969963921484
+Task = 2: ECE = 0.011063838717945385, MCE = 0.04106936454772947
+Task = 3: ECE = 0.011854234866525641, MCE = 0.04197557666633711
+Task = 4: ECE = 0.014220167394492332, MCE = 0.07154069546453967
+-- bin_accs =  [0.04377743 0.13731623 0.23066559 0.33557578 0.44521739 0.54149378
+ 0.63721325 0.76341731 0.85602094 0.94520548]
+-- bin_confs =  [0.03650029 0.14492039 0.24652018 0.34613466 0.44814758 0.54658791
+ 0.64634986 0.74896569 0.84764415 0.93854054]
+-- bin_sizes =  [18457.  6394.  3711.  2527.  1725.  1446.  1177.   913.   764.   511.]
+-- Overall ECE =  0.008362212222279904
+-- Overall MCE =  0.01585458906086845
+RunResults:ProtoNet,5,5,64,4,huffpost,test,600,0.590432,0.008362,0.015855
+val_epoch is 800, acc is 0.6317607821816226, ci95 is 0.007976060760974972
+Overall Calibration Errors for Test Epoch 800
+Total number of tasks: 5
+Task = 0: ECE = 0.014735995574647009, MCE = 0.038268084301374405
+Task = 1: ECE = 0.016515997699724873, MCE = 0.04893496105525272
+Task = 2: ECE = 0.013962759227055654, MCE = 0.04308157016576264
+Task = 3: ECE = 0.009956490652901785, MCE = 0.05707648341641103
+Task = 4: ECE = 0.014282901801936252, MCE = 0.04461954154220282
+-- bin_accs =  [0.0413025  0.13753213 0.22171946 0.33067168 0.42300779 0.54945904
+ 0.65391459 0.75858685 0.85261003 0.94235294]
+-- bin_confs =  [0.03230462 0.14482863 0.24634078 0.34770271 0.44779323 0.54993846
+ 0.64931477 0.75129316 0.84835616 0.9456019 ]
+-- bin_sizes =  [20023.  5446.  3094.  2129.  1669.  1294.  1124.  1019.   977.   850.]
+-- Overall ECE =  0.01046766921135278
+-- Overall MCE =  0.024785438935295223
+RunResults:ProtoNet,5,5,64,4,huffpost,val,800,0.631761,0.010468,0.024785
+test_epoch is 800, acc is 0.590564769268828, ci95 is 0.008932219144398115
+Overall Calibration Errors for Test Epoch 800
+Total number of tasks: 5
+Task = 0: ECE = 0.015372655114462215, MCE = 0.04775244633127701
+Task = 1: ECE = 0.019598141286856306, MCE = 0.07800945296163447
+Task = 2: ECE = 0.021585823135122514, MCE = 0.05762736002604163
+Task = 3: ECE = 0.01527604720917255, MCE = 0.051807760334701025
+Task = 4: ECE = 0.01787372576437916, MCE = 0.07780882891486673
+-- bin_accs =  [0.04710389 0.14266    0.23837379 0.32779199 0.43425076 0.50502152
+ 0.61165919 0.72745491 0.82831661 0.90638298]
+-- bin_confs =  [0.03310412 0.14510367 0.24670193 0.34597808 0.44634827 0.54840788
+ 0.64848507 0.74729559 0.8474272  0.94452913]
+-- bin_sizes =  [19319.  5797.  3419.  2346.  1635.  1394.  1115.   998.   897.   705.]
+-- Overall ECE =  0.014376691545758932
+-- Overall MCE =  0.043386363572677555
+RunResults:ProtoNet,5,5,64,4,huffpost,test,800,0.590565,0.014377,0.043386
+val_epoch is 1000, acc is 0.6317607817855784, ci95 is 0.007971792744926608
+Overall Calibration Errors for Test Epoch 1000
+Total number of tasks: 5
+Task = 0: ECE = 0.014664230600147939, MCE = 0.0732527734233264
+Task = 1: ECE = 0.02098731360958264, MCE = 0.08045231745793269
+Task = 2: ECE = 0.012540543768493053, MCE = 0.07535956887637868
+Task = 3: ECE = 0.015040010471280622, MCE = 0.06188392639160156
+Task = 4: ECE = 0.011027950654394205, MCE = 0.07593731388382852
+-- bin_accs =  [0.03749007 0.13328125 0.20930233 0.33934205 0.45769449 0.58633358
+ 0.69451697 0.79652845 0.87170676 0.94106814]
+-- bin_confs =  [0.03632853 0.14443022 0.24629651 0.34712275 0.44780756 0.54738564
+ 0.64910768 0.74994866 0.8479885  0.9396892 ]
+-- bin_sizes =  [18885.  6400.  3397.  2219.  1761.  1361.  1149.  1037.   873.   543.]
+-- Overall ECE =  0.011390724359556691
+-- Overall MCE =  0.046579785838996246
+RunResults:ProtoNet,5,5,64,4,huffpost,val,1000,0.631761,0.011391,0.046580
+test_epoch is 1000, acc is 0.5982724095499793, ci95 is 0.008970593811415762
+Overall Calibration Errors for Test Epoch 1000
+Total number of tasks: 5
+Task = 0: ECE = 0.012428554395504568, MCE = 0.06859207153320312
+Task = 1: ECE = 0.015776987677792776, MCE = 0.10003149810680845
+Task = 2: ECE = 0.007673910654264424, MCE = 0.052599653413024194
+Task = 3: ECE = 0.0124956241240137, MCE = 0.06818351918216203
+Task = 4: ECE = 0.01708667438291632, MCE = 0.04194500262920675
+-- bin_accs =  [0.04028995 0.13011802 0.24153613 0.31807603 0.45218295 0.59097421
+ 0.68105727 0.79291251 0.86521739 0.93717277]
+-- bin_confs =  [0.03836868 0.14481967 0.24632683 0.34696944 0.44710936 0.5482614
+ 0.64857433 0.74831797 0.84720198 0.93403404]
+-- bin_sizes =  [17796.  6863.  3958.  2578.  1924.  1396.  1135.   903.   690.   382.]
+-- Overall ECE =  0.010330696384772114
+-- Overall MCE =  0.044594546093101095
+RunResults:ProtoNet,5,5,64,4,huffpost,test,1000,0.598272,0.010331,0.044595

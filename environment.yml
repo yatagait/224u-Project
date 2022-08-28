@@ -1,0 +1,15 @@
+name: 224u
+channels:
+  - defaults
+dependencies:
+  - python=3
+  - pytorch
+  - torchvision
+  - pandas
+  - tqdm
+  - scikit-learn
+  - matplotlib
+  - transformers
+  - pytorch-model-summary
+  - h5py
+  - tensorboardx

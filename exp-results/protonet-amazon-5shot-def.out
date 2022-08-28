@@ -1,0 +1,26 @@
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.dense.bias', 'predictions.LayerNorm.weight', 'predictions.LayerNorm.bias', 'predictions.decoder.weight', 'predictions.dense.weight', 'predictions.decoder.bias', 'predictions.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Namespace(datasource='=amazonreview', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=15000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=5, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=1, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0)
+ProtoNet.data_=amazonreview.cls_5.mbs_1.ubs_5.metalr2e-05.innerlr0.001.numupdates5
+Traceback (most recent call last):
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 216, in <module>
+    main()
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 203, in main
+    train(args, protonet, meta_optimiser)
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 97, in train
+    for step, (x_spt, y_spt, x_qry, y_qry) in enumerate(dataset):
+UnboundLocalError: local variable 'dataset' referenced before assignment
+Some weights of the model checkpoint at albert-base-v1 were not used when initializing AlbertModel: ['predictions.dense.bias', 'predictions.dense.weight', 'predictions.LayerNorm.bias', 'predictions.decoder.weight', 'predictions.decoder.bias', 'predictions.LayerNorm.weight', 'predictions.bias']
+- This IS expected if you are initializing AlbertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing AlbertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Namespace(datasource='=amazonreview', select_data=-1, test_dataset=-1, num_classes=5, num_test_task=600, test_epoch=-1, metatrain_iterations=15000, meta_batch_size=1, update_lr=0.001, meta_lr=2e-05, num_updates=5, num_updates_test=10, update_batch_size=5, update_batch_size_eval=5, num_filters=64, weight_decay=0.0, mix=False, log=1, logdir='xxx', datadir='/iris/u/huaxiu/Data', resume=0, train=1, test_set=1, use_kg=0, trail=0, warm_epoch=0, ratio=1.0, temp_scaling=1.0)
+ProtoNet.data_=amazonreview.cls_5.mbs_1.ubs_5.metalr2e-05.innerlr0.001.numupdates5
+Traceback (most recent call last):
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 216, in <module>
+    main()
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 203, in main
+    train(args, protonet, meta_optimiser)
+  File "/iris/u/yatagait/MetaCalibration/ProtoNet/Amazon_ProtoNet/main.py", line 97, in train
+    for step, (x_spt, y_spt, x_qry, y_qry) in enumerate(dataset):
+UnboundLocalError: local variable 'dataset' referenced before assignment
